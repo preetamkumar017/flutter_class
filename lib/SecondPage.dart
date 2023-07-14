@@ -17,7 +17,10 @@ class _SecondPageState extends State<SecondPage> {
               onTap: () {
                 print("object");
               },
-              title: Text("pkkdnfk"),
+              title: Text(
+                "pkkdnfk",
+
+              ),
 
             )
           ],
