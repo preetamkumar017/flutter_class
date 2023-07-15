@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bnavi.dart';
 import 'home_page.dart';
 
 void main()
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Sinha",
-      home: HomePage()
+      home: Bnavi()
     );
   }
 }

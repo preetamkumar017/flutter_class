@@ -35,6 +35,61 @@ class _HomePageState extends State<HomePage> {
           mainAxisSize: MainAxisSize.max,
           children: [
 
+            Row(
+              children: [
+
+                Expanded(child:
+                TextFormField(
+                  decoration:  InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                    ),
+                    labelText: 'Enter Name',
+                    hintText: 'Enter Your Name',
+                    contentPadding: EdgeInsets.all(20),
+                  ),
+                  style: TextStyle(
+                      fontSize: 25
+                  ),
+
+                ),),
+
+                Expanded(child:
+                TextFormField(
+                  decoration:  InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                    ),
+                    labelText: 'Enter Name',
+                    hintText: 'Enter Your Name',
+                    contentPadding: EdgeInsets.all(20),
+                  ),
+                  style: TextStyle(
+                      fontSize: 25
+                  ),
+
+                ),),
+                Expanded(child:
+                TextFormField(
+                  decoration:  InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                    ),
+                    labelText: 'Enter Name',
+                    hintText: 'Enter Your Name',
+                    contentPadding: EdgeInsets.all(20),
+                  ),
+                  style: TextStyle(
+                      fontSize: 25
+                  ),
+
+                ),),
+              ],
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child:  TextFormField(
@@ -109,11 +164,11 @@ class _HomePageState extends State<HomePage> {
               child: ElevatedButton(
                   onPressed: () {
                     print(name.text);
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => const SecondPage(),
-                    //     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SecondPage(),
+                        ));
                   },
                   child: const Text("Go to Next Page")),
             )
