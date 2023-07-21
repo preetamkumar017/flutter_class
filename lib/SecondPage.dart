@@ -15,10 +15,10 @@ class _SecondPageState extends State<SecondPage> {
           children: [
             ListTile(
               onTap: () {
-                print("object");
+                print("object gdagedge");
               },
               title: Text(
-                "pkkdnfk",
+                "pkkdnfkdhdh",
 
               ),
 
