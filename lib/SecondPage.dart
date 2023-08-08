@@ -10,6 +10,9 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
+
+  double kk =1.0;
+  bool sw = true;
   @override
   Widget build(BuildContext context) {
 
@@ -77,31 +80,57 @@ class _SecondPageState extends State<SecondPage> {
         ) ,
       ),
       body:
-      Center(
-        child: ElevatedButton(
-            onPressed: () {
-              // Fluttertoast.showToast(msg: "click",fontSize: 40,
-              //     backgroundColor: Colors.red,
-              //     textColor: Colors.yellow,
-              //     gravity: ToastGravity.CENTER);
+      Column(
+        children: [
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  // Fluttertoast.showToast(msg: "click",fontSize: 40,
+                  //     backgroundColor: Colors.red,
+                  //     textColor: Colors.yellow,
+                  //     gravity: ToastGravity.CENTER);
 
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Your Text"),
-                    TextButton(onPressed: (){
-                      log("undo");
-                    }, child: Text("Undo"))
-                  ],
-                ),
-                duration: Duration(seconds: 3),
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Your Text"),
+                        TextButton(onPressed: (){
+                          log("undo");
+                        }, child: Text("Undo"))
+                      ],
+                    ),
+                    duration: Duration(seconds: 3),
 
-              ));
-              log("Clicked");
+                  ));
+                  log("Clicked");
 
-            },
-            child: const Text("Click me")),
+                },
+                child: const Text("Click me")),
+          ),
+          Slider(
+            min: 1.0,
+            max: 100,
+            value: kk,
+            activeColor: Colors.green,
+            inactiveColor: Colors.deepPurpleAccent,
+
+            onChanged:(value) {
+              kk = value;
+                log(value.toString() );
+                setState(() {
+                });
+          },),
+          Switch(
+            value: sw,
+            onChanged: (value) {
+            log(value.toString());
+            sw = value;
+            setState(() {
+
+            });
+          },)
+        ],
       ),
     );
   }

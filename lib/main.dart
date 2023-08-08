@@ -3,6 +3,7 @@ import 'package:flutter_application_1/SecondPage.dart';
 import 'package:flutter_application_1/appbar_widget.dart';
 import 'package:flutter_application_1/bnavi.dart';
 import 'package:flutter_application_1/button_widget.dart';
+import 'package:flutter_application_1/get_widget_view.dart';
 import 'package:flutter_application_1/gread_widget.dart';
 import 'package:flutter_application_1/image_widget.dart';
 import 'package:flutter_application_1/stack_widget.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Sinha",
-      home: SecondPage(),
+      home: GetWidgetView(),
     );
   }
 }

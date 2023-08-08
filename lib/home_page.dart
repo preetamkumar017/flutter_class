@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'SecondPage.dart';
 
@@ -40,7 +42,7 @@ class _HomePageState extends State<HomePage> {
 
                 Expanded(child:
                 TextFormField(
-                  decoration:  InputDecoration(
+                  decoration:  const InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
@@ -48,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                     hintText: 'Enter Your Name',
                     contentPadding: EdgeInsets.all(20),
                   ),
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 25
                   ),
 
@@ -56,7 +58,7 @@ class _HomePageState extends State<HomePage> {
 
                 Expanded(child:
                 TextFormField(
-                  decoration:  InputDecoration(
+                  decoration:  const InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
@@ -64,14 +66,14 @@ class _HomePageState extends State<HomePage> {
                     hintText: 'Enter Your Name',
                     contentPadding: EdgeInsets.all(20),
                   ),
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 25
                   ),
 
                 ),),
                 Expanded(child:
                 TextFormField(
-                  decoration:  InputDecoration(
+                  decoration:  const InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20))
                     ),
@@ -79,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                     hintText: 'Enter Your Name',
                     contentPadding: EdgeInsets.all(20),
                   ),
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 25
                   ),
 
@@ -87,7 +89,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -102,15 +104,15 @@ class _HomePageState extends State<HomePage> {
 
                         });
                       },
-                      child: pass ? Icon(Icons.visibility_off) : Icon(Icons.visibility)) ,
-                  border: OutlineInputBorder(
+                      child: pass ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility)) ,
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20))
                   ),
                     labelText: 'Enter Name',
                     hintText: 'Enter Your Name',
-                  contentPadding: EdgeInsets.all(20),
+                  contentPadding: const EdgeInsets.all(20),
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 25
                 ),
                 autofocus: true,
@@ -127,24 +129,35 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
 
-            const Center(
-                child: Text(
+              Center(
+
+                child: Tooltip(
+                  message: "this is my tool tip",
+                  onTriggered: (){
+                    log("message");
+                  },
+                  triggerMode: TooltipTriggerMode.tap,
+                  showDuration: Duration(milliseconds: 500),
+
+                  child: Text(
               "first page",
+
               style: TextStyle(
-                  fontSize: 35,
-                  color: Colors.purple,
-                  fontWeight: FontWeight.w700,
-                  fontStyle: FontStyle.italic,
-                  // letterSpacing: 8,
-                  // wordSpacing: -20,
-                  backgroundColor: Colors.yellow,
-                  shadows: [
-                    Shadow(
-                        color: Colors.blueAccent,
-                        offset: Offset(2, 1),
-                        blurRadius: 10)
-                  ]),
-            )),
+                    fontSize: 35,
+                    color: Colors.purple,
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.italic,
+                    // letterSpacing: 8,
+                    // wordSpacing: -20,
+                    backgroundColor: Colors.yellow,
+                    shadows: [
+                      Shadow(
+                          color: Colors.blueAccent,
+                          offset: Offset(2, 1),
+                          blurRadius: 10)
+                    ]),
+            ),
+                )),
             RichText(
               text: const TextSpan(
                   text: 'Don\'t have an account?',
